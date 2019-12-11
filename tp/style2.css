@@ -1,0 +1,587 @@
+.mb10{margin-bottom:10px}
+
+
+
+#scriptorium{display:block;float:none;padding:15px 17px 15px 15px}
+.scriptorium .clearfix::after{display:block;content:'';clear:both}
+.scriptorium .block{display:block;float:none}
+.scriptorium p{margin:0}
+.scriptorium .btn{ display:inline-block; box-sizing: border-box; padding:0;background:transparent;border:0;outline:0;font-size:12px;font-family:gulim, êµ´ë¦¼, Helvetica;cursor:pointer}
+.scriptorium .btn:hover { text-decoration: none;}
+.scriptorium .table{width:100%;table-layout:fixed}
+.scriptorium .table,
+.scriptorium .table th,
+.scriptorium .table td{border-spacing:0;border-collapse:collapse}
+
+.scriptorium_title{height:38px;margin-bottom:20px;padding-left:30px;background:url('http://static.inven.co.kr/image_2011/lol/match/title_710x38_green1.png') no-repeat 0 0;color:#555;font-size:13px;font-weight:bold;line-height:38px}
+.scriptorium_sub_title{margin-bottom:10px;color:#565555;font-size:12px;font-weight:bold}
+.scriptorium_sub_title.color{color:#e0400f}
+
+.scriptorium_filter{width:710px;padding:1px 0;margin-bottom:20px;border-width:1px 0;border-style:solid;border-color:#298197}
+#lolDbMatchTeamTotal .scriptorium_filter,
+#lolDbMatchPlayerList .scriptorium_filter,
+#lolDbMatchPlayerTotal .scriptorium_filter,
+#lolDbMatchTeamList .scriptorium_filter{margin-bottom:0;margin-top:20px}
+.scriptorium_filter .btn_check{display:inline-block;width:60px;height:23px;margin-top:5px;background:#969696;color:#fff;border:1px solid #6e6e6e;font-weight:bold;text-align:center;line-height:23px;box-shadow:inset 0 1px 0 #cbcbcb;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.scriptorium_filter .btn_check:hover{text-decoration:none}
+.scriptorium_filter .btn_check.selected{background:#1ea593;color:#fff;border:1px solid #168778;box-shadow:inset 0 1px 0 #8fd2c9;text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.scriptorium_filter .filter_wrap{border-width:2px 0;border-style:solid;border-color:#298197}
+.scriptorium_filter .row{position:relative;border-bottom:1px solid #9ec6c9}
+.scriptorium_filter .row:last-child{border-bottom:0}
+.scriptorium_filter .title{position:absolute;top:0;left:0;bottom:0;width:120px;background:#dae7ea;z-index:20}
+.scriptorium_filter .title .text{position:absolute;top:50%;left:0;right:0;text-align:center;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.scriptorium_filter .title .text p{color:#002a2d;font-weight:bold}
+.scriptorium_filter .value{position:relative;padding-left:121px}
+.scriptorium_filter .sub_row{position:relative}
+.scriptorium_filter .sub_row::before{display:block;content:'';position:absolute;left:0;bottom:0;right:0;height:1px;background:url('http://static.inven.co.kr/image_2011/lol/match/line_dot01.png') repeat-x bottom left;z-index:30}
+.scriptorium_filter .sub_row:last-child::before{display:none}
+.scriptorium_filter .sub_title{position:absolute;top:0;left:0;bottom:0;width:80px;background:#e7eaeb}
+.scriptorium_filter .size .sub_title{width:180px}
+.scriptorium_filter .sub_title span{position:absolute;top:50%;left:0;right:0;color:#1f6360;font-weight:bold;text-align:center;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.scriptorium_filter .sub_value{padding:3px 0px 3px 90px}
+.scriptorium_filter .sub_value.has_chackbox{padding:4px 0px 0px 90px}
+
+.scriptorium_filter .size .sub_value{padding:3px 1px 3px 90px}
+.scriptorium_filter .size .sub_value.has_chackbox{padding:4px 1px 1px 190px}
+
+.scriptorium_filter .checkbox{display:block;position:relative;float:left;height:20px;padding-right:10px;margin:0 10px 4px 0;line-height:20px}
+.scriptorium_filter .checkbox input{display:none}
+.scriptorium_filter .checkbox::before{display:block;content:'';position:absolute;top:50%;right:0;width:1px;height:10px;margin-top:-5px;border-width:4px 0;border-style:solid;border-color:#b6b6b6;box-sizing:border-box}
+.scriptorium_filter .checkbox:last-child::before{display:none}
+.scriptorium_filter .select{width:420px;height:22px;padding:0 10px;border:1px solid #a4a4a4;box-sizing:border-box}
+.scriptorium_filter .size .select{width:399px}
+.scriptorium_filter .selected { color:red; }
+
+.listTable table.autowidth { width: 100%; table-layout: auto; }
+.listTable{width:800px;margin-bottom:20px;border-width:1px 0;border-style:solid;border-color:#cecece}
+.listTable td .name{width:74px;overflow:hidden;text-overflow:ellipsis}
+.listTable thead th{background:#f6f5f5 url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png') repeat-x 2px bottom;color:#0d4473;font-weight:bold;height:24px}
+.listTable td{height:24px;background:#fff url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png') repeat-x 2px bottom;text-align:center}
+.listTable td.left{text-align:left}
+.listTable th.left{text-align:left}
+.listTable th.header{font-size:0.5em; cursor:hand;color:#0d4473;font-weight:bold}
+.listTable th.headerSortDown{font-size:0.5em; background:#aaaaff url('http://static.inven.co.kr/image_2011/lol/fonticon/desc.gif') no-repeat center 18px}
+.listTable th.headerSortUp{font-size:0.5em; background:#ffaaaa url('http://static.inven.co.kr/image_2011/lol/fonticon/asc.gif') no-repeat center 18px}
+.listTable tr:last-child td{background:#fff}
+.listTable td .icon{width:16px;height:16px;border:0;vertical-align:middle;margin-right:3px}
+.listTable tr.over { display: none; }
+
+.listTable .bychamp td img { width:16px; height:16px; border:0; vertical-align: -3px; margin-right:3px; }
+
+.alertMsg{margin-top:20px;font-size:11px;font-weight:normal;font-family:ë‹ì›€,Dotum,Helvetica;color:#333;border:2px solid #cecece;width:686px;padding:10px}
+
+.listTableToggle{width:710px;background:#eee;height:12px;padding-top:3px;overflow:hidden;text-align:center}
+.listTableToggle a{text-decoration:none;font-weight:bold}
+
+.scriptorium_search{padding:10px 0;margin-bottom:20px;background:#c0d8e6;font-size:0;text-align:center}
+.scriptorium_search > *{display:inline-block;font-size:12px}
+.scriptorium_search .text{height:34px;padding:0 10px;color:#08476b;font-weight:bold;line-height:34px}
+.scriptorium_search .input{width:400px;height:34px;padding:0 10px;margin-right:5px;background:#fff;border:1px solid #ededed;box-sizing:border-box}
+.scriptorium_search .btn{width:90px;height:34px;margin-right:3px;background:#717171;color:#fff;border:1px solid #212121;font-size:13px;font-weight:bold;text-align:center;line-height:32px;box-shadow:inset 0 1px 0 #b8b8b8;text-shadow:0 1px 2px #000}
+.scriptorium_search .btn_submit{background:#1f67ab;box-shadow:inset 0 1px 0 #8fb3d5}
+.scriptorium_search .btn_reset{margin-right:0}
+
+.scriptorium_box{padding:14px 9px;margin-bottom:15px;background:#dae7ea;border:1px solid #98c6d1}
+
+.scriptorium_team_info .row{margin-bottom:15px}
+.scriptorium_team_info .row:last-child{margin-bottom:0}
+.scriptorium_team_info .info_arae{float:left;padding-left:10px}
+.scriptorium_team_info .info_arae .img_area{float:left;width:70px;height:70px;background:#fff;border:1px solid #000;box-sizing:border-box}
+.scriptorium_team_info .info_arae .img_area img{width:100%;height:100%}
+.scriptorium_team_info .info_arae .text_area{float:left;width:235px;padding-left:10px;box-sizing:border-box}
+.scriptorium_team_info .info_arae .text_area .top{margin-bottom:5px;font-size:0;line-height:25px}
+.scriptorium_team_info .info_arae .text_area .top .name{display:inline-block;color:#007067;font-size:22px;font-weight:bold;vertical-align:middle}
+.scriptorium_team_info .info_arae .text_area .top .btn_bookmark{display:inline-block;width:64px;height:18px;vertical-align:middle}
+.scriptorium_team_info .info_arae .text_area .bottom p{height:20px;line-height:20px}
+.scriptorium_team_info .info_arae .text_area .bottom img{margin:-2px 0 0;vertical-align:middle}
+.scriptorium_team_info .rank{float:left;width:100px;padding-left:15px;text-align:center}
+.scriptorium_team_info .rank .name{color:#323232;font-weight:bold}
+.scriptorium_team_info .rank .value{height:30px;color:#df361a;font-size:17px;font-weight:bold;line-height:30px}
+.scriptorium_team_info .rank .value.blue{color:#0070c0}
+.scriptorium_team_info .rank .value.size{font-size:14px}
+.scriptorium_team_info .latest_log{float:left;width:130px;text-align:center}
+.scriptorium_team_info .latest_log .name{color:#323232;font-weight:bold}
+.scriptorium_team_info .latest_log .result{height:25px;line-height:25px}
+.scriptorium_team_info .latest_log .result p{color:#323232;font-size:13px}
+.scriptorium_team_info .latest_log .result p span{font-size:15px;font-weight:bold}
+.scriptorium_team_info .latest_log .result .green{color:#08861a}
+.scriptorium_team_info .latest_log .result .red{color:#c33b16}
+.scriptorium_team_info .latest_log .result .left{float:left;width:50%;padding-right:10px;text-align:right;box-sizing:border-box}
+.scriptorium_team_info .latest_log .result .right{float:right;width:50%;padding-left:10px;text-align:left;box-sizing:border-box}
+.scriptorium_team_info .latest_log .prograss{position:relative;width:130px;height:15px;background:#afccd3}
+.scriptorium_team_info .latest_log .prograss .bar{position:absolute;top:0;left:0;height:15px;
+background: -moz-linear-gradient(top, #11d2b8 0%, #0e9886 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #11d2b8 0%,#0e9886 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #11d2b8 0%,#0e9886 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11d2b8', endColorstr='#0e9886',GradientType=0 ); /* IE6-9 */}
+.scriptorium_team_info .latest_log .value{height:20px;color:#10337a;font-size:12px;font-weight:bold;line-height:20px}
+.scriptorium_team_info .kda{float:right;width:115px;text-align:center}
+.scriptorium_team_info .kda .name{color:#323232;font-weight:bold}
+.scriptorium_team_info .kda .value{height:30px;color:#14a0da;font-size:15px;font-weight:bold;line-height:30px}
+.scriptorium_team_info .kda .text{color:#323232}
+
+.log_list{background:#fff;text-align:center}
+.log_list .text_left{text-align:left}
+.log_list thead{background:#447479}
+.log_list thead th{color:#fff;font-weight:bold;line-height:30px}
+.log_list tbody td{padding:10px;color:#646464;border-bottom:1px solid #c2c2c2;line-height:1.4}
+.log_list tbody tr:last-child td{border-bottom:0}
+.log_list img{vertical-align:middle}
+.log_list .name{color:#323232}
+
+.log_list.log01 col.size01{width:210px}
+.log_list.log01 col.size02{width:60px}
+
+.log_list.log02 col.size01{width:76px}
+.log_list.log02 col.size02{width:82px}
+.log_list.log02 tbody th{height:30px;background:#55a1a7;color:#ebebeb;border-right:1px solid #87c2b9;line-height:1.4}
+.log_list.log02 tbody td{padding:0;color:#646464;border-right:1px solid #87c2b9;font-weight:bold;line-height:25px}
+.log_list.log02 tbody th:nth-child(9){border-right:0}
+.log_list.log02 tbody td:nth-child(9){border-right:0}
+.log_list.log02 tbody td.win{color:#cc4020}
+.log_list.log02 tbody td.lose{color:#956923}
+.log_list.log02 tbody td.yet{color:#969696;font-weight:normal}
+
+.most_list .item{width:223px;margin-right:10px}
+.most_list .item:last-child{margin-right:0}
+.most_list .name{height:30px;color:#fff;font-size:14px;font-weight:bold;text-align:center;line-height:30px}
+.most_list .list_item{padding:4px 10px;border-bottom:1px solid #ccc}
+.most_list .list_item:last-child{border-bottom:0}
+.most_list .list_item .img_area{float:left;width:30px;height:30px;overflow:hidden}
+.most_list .list_item .img_area img{width:100%;height:100%}
+.most_list .list_item .item_name{float:left;height:30px;padding-left:10px;color:#323232;font-weight:bold;line-height:30px}
+.most_list .list_item .value{float:right;height:30px;font-weight:bold;line-height:30px}
+.most_list .color01 .name{background:#5ab08e}
+.most_list .color01 .list{background:#aed9d9}
+.most_list .color01 .list_item{border-color:#7dbbbb}
+.most_list .color01 .value{color:#077145}
+.most_list .color02 .name{background:#5986b1}
+.most_list .color02 .list{background:#a5d6e2}
+.most_list .color02 .list_item{border-color:#89b9c5}
+.most_list .color02 .value{color:#1e7c8f}
+.most_list .color03 .name{background:#6767a5}
+.most_list .color03 .list{background:#b7b7d9}
+.most_list .color03 .list_item{border-color:#8d8db3}
+.most_list .color03 .value{color:#49498f}
+
+.scriptorium_layout{margin-bottom:20px}
+.scriptorium_layout .left_div{float:left;width:350px}
+.scriptorium_layout .right_div{float:right;width:350px}
+
+.scriptorium_player_info .row{margin-bottom:15px}
+.scriptorium_player_info .row:last-child{margin-bottom:0}
+.scriptorium_player_info .info_arae{float:left;padding-left:10px}
+.scriptorium_player_info .info_arae .img_area{float:left;width:70px;height:70px;background:#fff;border:1px solid #000;box-sizing:border-box}
+.scriptorium_player_info .info_arae .img_area img{width:100%;height:100%}
+.scriptorium_player_info .info_arae .text_area{float:left;width:265px;padding-left:10px;box-sizing:border-box}
+.scriptorium_player_info .info_arae .text_area .top{margin-bottom:5px;font-size:0;line-height:25px}
+.scriptorium_player_info .info_arae .text_area .top .name{display:inline-block;color:#007067;font-size:22px;font-weight:bold;vertical-align:middle}
+.scriptorium_player_info .info_arae .text_area .top .btn_bookmark{display:inline-block;width:64px;height:18px;vertical-align:middle}
+.scriptorium_player_info .info_arae .text_area .bottom p{height:20px;line-height:20px}
+.scriptorium_player_info .info_arae .text_area .bottom img{margin:-2px 0 0;vertical-align:middle}
+.scriptorium_player_info .info_arae .text_area .bottom .icon{width:25px;height:25px}
+.scriptorium_player_info .rank{float:left;width:90px;min-height:1px;padding-left:15px;text-align:center}
+.scriptorium_player_info .rank .name{color:#323232;font-weight:bold}
+.scriptorium_player_info .rank .value{height:55px;color:#df361a;font-size:17px;font-weight:bold;line-height:55px}
+.scriptorium_player_info .latest_log{float:left;width:130px;text-align:center}
+.scriptorium_player_info .latest_log .name{color:#323232;font-weight:bold}
+.scriptorium_player_info .latest_log .result{height:25px;line-height:25px}
+.scriptorium_player_info .latest_log .result p{color:#323232;font-size:13px}
+.scriptorium_player_info .latest_log .result p span{font-size:15px;font-weight:bold}
+.scriptorium_player_info .latest_log .result .green{color:#08861a}
+.scriptorium_player_info .latest_log .result .red{color:#c33b16}
+.scriptorium_player_info .latest_log .result .left{float:left;width:50%;padding-right:10px;text-align:right;box-sizing:border-box}
+.scriptorium_player_info .latest_log .result .right{float:right;width:50%;padding-left:10px;text-align:left;box-sizing:border-box}
+.scriptorium_player_info .latest_log .prograss{position:relative;width:130px;height:15px;background:#afccd3}
+.scriptorium_player_info .latest_log .prograss .bar{position:absolute;top:0;left:0;height:15px;
+background: -moz-linear-gradient(top, #11d2b8 0%, #0e9886 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #11d2b8 0%,#0e9886 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #11d2b8 0%,#0e9886 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11d2b8', endColorstr='#0e9886',GradientType=0 ); /* IE6-9 */}
+.scriptorium_player_info .latest_log .value{height:20px;color:#10337a;font-size:12px;font-weight:bold;line-height:20px}
+.scriptorium_player_info .kda{float:right;width:95px;text-align:center}
+.scriptorium_player_info .kda .name{color:#323232;font-weight:bold}
+.scriptorium_player_info .kda .value{height:30px;color:#14a0da;font-size:15px;font-weight:bold;line-height:30px}
+.scriptorium_player_info .kda .text{color:#323232}
+
+.player_layout .player_sub_title{float:left;width:100%;height:32px;margin-bottom:10px;background:#447479;color:#fff;font-weight:bold;text-align:center;line-height:32px}
+.player_layout .left{float:left;width:340px}
+.player_layout .left .name{background:#5986b1}
+.player_layout .left .list{background:#a5d6e2}
+.player_layout .left .list .row{padding:5px 10px;margin-bottom:0;border-bottom:1px solid #89b9c5;text-align:center}
+.player_layout .left .list .row:last-child{border-bottom:0}
+.player_layout .left .list .row .img_area{float:left;width:50px;height:50px}
+.player_layout .left .list .row .img_area img{width:100%;height:100%}
+.player_layout .left .list .row .name_area{width:80px}
+.player_layout .left .list .row .play_area{width:66px}
+.player_layout .left .list .row .log_area{width:74px}
+.player_layout .left .list .row .kda_area{width:50px}
+.player_layout .left .list .row .sub_name{height:25px;color:#1e7c8f;font-size:11px;line-height:25px}
+.player_layout .left .list .row .value{height:25px	;color:#126396;font-size:11px;font-weight:bold;line-height:25px}
+.player_layout .right{float:right;width:340px}
+.player_layout .right .name{background:#a56795}
+.player_layout .right .value_area{background:#d8d0dc}
+.player_layout .right .top{padding:10px 10px 19px}
+.player_layout .right .top .color{position:relative;float:left;height:15px;padding:0 10px 0 20px;color:#646464;font-size:11px;line-height:15px}
+.player_layout .right .top .color::before{display:block;content:'';position:absolute;top:0;left:0;width:15px;height:15px}
+.player_layout .right .top .color01::before{
+background: -moz-linear-gradient(top, #46d6ff 0%, #01c6ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #46d6ff 0%,#01c6ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #46d6ff 0%,#01c6ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46d6ff', endColorstr='#01c6ff',GradientType=0 ); /* IE6-9 */
+}
+.player_layout .right .top .color02::before{
+background: -moz-linear-gradient(top, #eaae7d 0%, #e28f4d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eaae7d 0%,#e28f4d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eaae7d 0%,#e28f4d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaae7d', endColorstr='#e28f4d',GradientType=0 ); /* IE6-9 */
+}
+.player_layout .right .sub_row{float:left;width:113px}
+.player_layout .right .sub_row:last-child{width:114px}
+.player_layout .right .progress_area{position:relative;width:100%;height:109px}
+.player_layout .right .progress_area .text{font-size:11px;text-align:center}
+.player_layout .right .progress_area .left{position:absolute;top:0;bottom:0;left:24px;width:30px}
+.player_layout .right .progress_area .left .text{color:#1e8bab}
+.player_layout .right .progress_area .right{position:absolute;top:0;bottom:0;right:24px;width:30px}
+.player_layout .right .progress_area .right .text{color:#c13301}
+.player_layout .right .progress_area .bg{position:absolute;left:0;right:0;bottom:0;height:90px;background:#9c95a2}
+.player_layout .right .progress_area .bar{position:absolute;left:0;bottom:0;right:0}
+.player_layout .right .progress_area .left .bar{
+background: -moz-linear-gradient(top, #46d6ff 0%, #01c6ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #46d6ff 0%,#01c6ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #46d6ff 0%,#01c6ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46d6ff', endColorstr='#01c6ff',GradientType=0 ); /* IE6-9 */
+}
+.player_layout .right .progress_area .right .bar{
+background: -moz-linear-gradient(top, #eaae7d 0%, #e28f4d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eaae7d 0%,#e28f4d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eaae7d 0%,#e28f4d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaae7d', endColorstr='#e28f4d',GradientType=0 ); /* IE6-9 */
+}
+.player_layout .right .text_area{height:30px;background:#6767a5;color:#fff;border-right:1px solid #9180bf;font-size:11px;font-weight:bold;text-align:center;line-height:30px}
+.player_layout .right .sub_row:last-child .text_area{border-right:0}
+.player_layout .name{height:27px;color:#fff;font-weight:bold;text-align:center;line-height:27px}
+
+.player_graph{height:350px; margin-bottom:20px}
+
+.floatChart { width: 710px; height: 350px; }
+.floatChart div { display: block; float: none; }
+
+#lolDbMatchTeamList .listTable
+
+
+.memberTable{border:1px solid #cecece;width:348px}
+.memberTable table th{height:32px;background:#f6f5f5 url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png') repeat-x 2px bottom;text-align:center;color:#0d4473;font-weight:bold}
+.memberTable table td{height:24px;background:#fff url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png') repeat-x 2px bottom;text-align:center;color:#474747}
+.memberTable table.notPos td .left { margin-left:0; }
+.memberTable table td.split1{border-right:1px solid #cecece}
+.memberTable table tr:last-child td{background:#fff}
+.memberTable table.notPos .left { text-align: left;}
+.memberTable table td .left{margin-left:70px}
+
+.historyTable{width:708px;border:1px solid #cecece;overflow:hidden;background:#fff url('http://static.inven.co.kr/image_2011/lol/team/dot_1x4_gray1.png') repeat-y 355px top;padding-bottom:8px;margin-bottom:20px}
+.historyTable ul{width:711px}
+.historyTable ul li{width:355px;height:20px}
+.historyTable ul li .text{margin:8px 0 0 9px;color:#474747}
+
+.match_list .row{ margin-bottom: 18px; width: 710px; border: 1px solid #cecece; background: white; }
+.match_list .listTop { margin-top: 1px; width: 710px; height: 28px; overflow: hidden; background: linear-gradient(to top, #eeeeee, #fefefe); border-bottom: 1px solid #cecece; }
+.match_list .listTop .date {  line-height: 28px; margin-left: 10px; color: black; width: 150px; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: bold; }
+.match_list .listTop .title { line-height: 28px;width: 390px; color: black; font-size: 14px; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: bold; text-align: center;}
+.match_list .listTop .stage { line-height: 28px; width: 200px; color: black; font-size: 13px; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: bold;	 text-align: right; } 
+.match_list .wTeam{  width: 280px; float: left;}
+.match_list .lTeam{  width: 280px; float: right;}
+.match_list .score{  width: 150px; height: 130px;  background: url('http://static.inven.co.kr/image_2011/lol/match/bg_score_150x20a.png') no-repeat left 35px; }
+.match_list .color1{ color: #2371f1;}
+.match_list .color2{ color: #eb2323; }
+.match_list .leftPart{ float: left; }
+.match_list .rightPart{ float: right; }  
+.match_list .lTeam .rightPart,
+.match_list .wTeam .leftPart{ width: 210px; height: 80px; text-align: center; }
+.match_list .wTeam .rightPart,
+.match_list .lTeam .leftPart{ width: 70px; height:80px;}
+.match_list .teamname{  font-size: 16pt; font-family: ë‹ì›€ì²´; font-weight: bold; color: #181818; margin-top: 17px; display: inline-block;}
+.match_list .tx1{  font-size: 10pt; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: bold; color: #5a5a5a; margin-right: 3px;}
+.match_list .tx2{  font-size: 11pt; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: bold; color: #323232; letter-spacing: -1px; margin-right: 5px;}
+.match_list .tx3{  font-size: 10pt; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: normal; color: #969696; display: block; text-align: center; width: 150px; }
+.match_list .tx4{  font-size: 21pt; font-family: ë‹ì›€ì²´, Dotum, Helvetica; font-weight: bold; color: #323232; display: block; text-align: center; width: 150px; }
+.match_list .tx5{ font-size: 40pt; font-family: ë‹ì›€, Dotum, Helvetica; font-weight: bold;  margin: 10px 0px 0px 10px; }
+.match_list .gametime{ font-size: 14pt; font-family: ë‹ì›€ì²´, Dotum, Helvetica; color: #505050; font-weight: bold; display: block; text-align: center; width: 150px;  margin-top: 18px;}
+.match_list .killscore{ margin-top: 15px; }
+.match_list .teamscore{ width: 100%; }
+.match_list .pick li{margin-left: 5px;margin-bottom: 10px;}
+.match_list .pick li img{width: 50px;height: 50px;}
+.match_list .wTeam .ban{ float: left; }
+.match_list .lTeam .ban{ float: right; }
+.match_list .ban{ display: none; }
+.match_list .ban{ margin: 0px 5px; }
+.match_list .ban li{margin-left: 5px; width: 30px;height: 30px;line-height: 30px;text-align: center;margin-bottom: 10px;}
+.match_list .ban li img{width: 30px;height: 30px;}
+.match_list .listDetail{width: 100%;height: 20px;background-color: #ddedf0;text-align: center;}
+.match_list .listDetail a { font-weight: bold; color: black; color: #086d83; line-height: 20px;}
+
+.moreBanner{margin-bottom:20px}
+
+.btn_more{display:block;float:none; height: 24px; background: white url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png') repeat-x 2px top;font-weight:bold; text-align: center; line-height:24px;cursor:pointer}
+
+.match_list .detailTable{ width: 690px; border-top: 1px solid #d3d3d3;  background-color: #f6f6f6; padding: 10px;}
+
+.match_list .detailTable ul,
+.match_list .detailTable ul li{
+    width: 344px;
+}
+
+.match_list .detailTable ul li { border-bottom: 1px dotted #d3d3d3; padding: 10px 0px; }
+.match_list .detailTable ul li:last-child{
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+.match_list .detailTable ul li:first-child{
+    padding-top: 0px;
+}
+
+.match_list .detailTable .left{ float: left; border-right: 1px solid #d3d3d3; }
+.match_list .detailTable .right,
+.match_list .detailTable .right .icon,
+.match_list .detailTable .right .player  { float: right; }
+.match_list .detailTable .right li{
+    padding-left: 10px;
+
+}
+
+
+.match_list .detailTable .champicon{ width: 65px; height: 65px; float: right; }
+.match_list .detailTable .spellicon{ width: 30px; height: 65px; float: left; margin-right: 5px;}
+.match_list .detailTable .spellicon img{ width: 30px; height: 30px; }
+.match_list .detailTable .spellicon .spell1icon{ margin-bottom: 5px; }
+
+
+.match_list .detailTable .right .champicon{float: left; }
+.match_list .detailTable .right .spellicon{float: right; margin-left: 5px;  margin-right: 10px;}
+.match_list .detailTable .playername{  font-size: 14pt; font-family: ë‹ì›€ì²´; font-weight: bold; letter-spacing: -1px; display: inline-block; margin: 0px 10px;  }
+
+.match_list .detailTable .player{ width: 240px; }
+.match_list .detailTable .right .player{ width: 230px; float: left; }
+.match_list .detailTable .right .playername{ float: right; }
+.match_list .detailTable .player ul li{
+    width: 40px;
+    border: none;
+    padding: 0px;
+    text-align: center;
+
+}
+.match_list .detailTable .player ul li:last-child{
+    width: 55px;
+}
+
+.match_list .detailTable .player ul.p1 li{
+    font-weight: bold;
+    color: #828282;
+    margin-top: 5px;
+}
+
+.match_list .detailTable .player ul.p2 li{
+    font-weight: bold;
+    color: #323232;
+    font-size: 12pt;
+    font-family: ë‹ì›€, Dotum, Helvetica;
+}
+
+.match_list .detailTable .right ul{
+    width: 230px;
+}
+
+.machName{width:100%;margin-top:20px;margin-bottom:-8px}
+
+#lolCommonLayer DIV.inLayer DIV.inLayer2 { padding: 2; border: 0; color: white; }
+#lolDb .title893GR1 { width: 683px; height: 24px; _width: 710px; _height: 38px; padding: 14px 0 0 27px; color: #555555; font-size: 13px; font-weight: bold; overflow: hidden; background: url('http://static.inven.co.kr/image_2011/lol/match/title_710x38_green1.png') no-repeat left top; }
+#lolDbMatchTeamList { margin: 15px 0 0 15px; padding-bottom: 10px; }
+#lolDbMatchTeamList .search { width: 893px; margin-top: 21px; }
+#lolDbMatchTeamList .search .leftImage { width: 25px; height: 110px; background: url('http://static.inven.co.kr/image_2011/lol/match/bg_25x110_green_search.png') no-repeat left top; overflow: hidden; margin-top: 3px; }
+#lolDbMatchTeamList .search .searchTable { width: 710px; overflow: hidden; background: #e1e1e1; }
+#lolDbMatchTeamList .search .searchTable table { margin: 2px; background: white; }
+#lolDbMatchTeamList .search .searchTable table th { background: #eeeeee; width: 92px; height: 25px; font-weight: bold; color: #444444; }
+#lolDbMatchTeamList .search .searchTable table td { font-weight: bold; background: white; width: 665px; _width: 676px; padding-left: 9px; color: #444444; }
+#lolDbMatchTeamList .search .searchTable table td .submit { width: 50px; height: 20px; overflow: hidden; background: url('http://static.inven.co.kr/image_2011/lol/match/bttn_50x20_green1_search.png') no-repeat left top; border: 0; text-indent: -100em; cursor: pointer; margin-top: 0px; vertical-align: middle; margin-bottom: 2px; }
+#lolDbMatchTeamList .search .searchTable table td.line { background: #cecece; height: 1px; }
+
+#lolDbMatchTeamList .listTable { width: 710px; border-top: 1px solid #cecece; background: white; margin-bottom: -1px; }
+#lolDbMatchTeamList .listTableTeam { margin-top: 18px; width: 710px; border-top: 1px solid #cecece; border-bottom: 1px solid #cecece; }
+#lolDbMatchTeamList .listTable thead th { background: #f6f5f5 url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png') repeat-x 2px bottom; color: #0d4473; font-weight: bold; height: 24px; }
+#lolDbMatchTeamList .listTable td { height: 24px; background-image: url('http://static.inven.co.kr/image_2011/lol/common/dot_4x1_404b5a.png'); background-position: 2px bottom; background-repeat: repeat-x; text-align: center; }
+#lolDbMatchTeamList .listTable td img { width: 16px; height: 16px; border: 0; }
+#lolDbMatchTeamList .listTable td.left { text-align: left; }
+
+#lolDbMatchTeamList .listFrame { margin-top: 18px; width: 710px; border: 1px solid #cecece; background: white; }
+#lolDbMatchTeamList .listTop { margin-top: 1px; width: 710px; height: 28px; overflow: hidden; background: linear-gradient(to top, #eeeeee, #fefefe); border-bottom: 1px solid #cecece; }
+#lolDbMatchTeamList .listTop .date {  float:left; line-height: 28px; width: 160px; margin-left: 10px; color: black; font-family: 돋움, Dotum, Helvetica; font-weight: bold; }
+#lolDbMatchTeamList .listTop .title { float:left; line-height: 28px; width: 100px; color: black; font-size: 14px; font-family: 돋움, Dotum, Helvetica; font-weight: bold; text-align: center;}
+#lolDbMatchTeamList .listTop .stage { float:left; line-height: 28px; width: 160px; margin-right:10px; color: black; font-size: 13px; font-family: 돋움, Dotum, Helvetica; font-weight: bold;	 text-align: right; }
+#lolDbMatchTeamList .wTeam{  width: 280px; float: left;}
+#lolDbMatchTeamList .lTeam{  width: 280px; float: right;}
+#lolDbMatchTeamList .score{  width: 150px; height: 130px;  background: url('http://static.inven.co.kr/image_2011/lol/match/bg_score_150x20a.png') no-repeat left 35px; }
+#lolDbMatchTeamList .color1{ color: #2371f1;}
+#lolDbMatchTeamList .color2{ color: #eb2323; }
+
+#lolDbMatchTeamList .leftPart{ float: left; }
+#lolDbMatchTeamList .rightPart{ float: right; }  
+ 
+#lolDbMatchTeamList .lTeam .rightPart,
+#lolDbMatchTeamList .wTeam .leftPart{ width: 210px; text-align: center; }
+#lolDbMatchTeamList .wTeam .rightPart,
+#lolDbMatchTeamList .lTeam .leftPart{ width: 70px; }
+#lolDbMatchTeamList .teamname{  font-size: 16pt; font-family: 돋움체; font-weight: bold; color: #181818; margin-top: 17px; display: inline-block;}
+#lolDbMatchTeamList .tx1{  font-size: 10pt; font-family: 돋움, Dotum, Helvetica; font-weight: bold; color: #5a5a5a; margin-right: 3px;}
+#lolDbMatchTeamList .tx2{  font-size: 11pt; font-family: 돋움, Dotum, Helvetica; font-weight: bold; color: #323232; letter-spacing: -1px; margin-right: 5px;}
+#lolDbMatchTeamList .tx3{  font-size: 10pt; font-family: 돋움, Dotum, Helvetica; font-weight: normal; color: #969696; display: block; text-align: center; width: 150px; }
+#lolDbMatchTeamList .tx4{  font-size: 21pt; font-family: 돋움체, Dotum, Helvetica; font-weight: bold; color: #323232; display: block; text-align: center; width: 150px; }
+#lolDbMatchTeamList .tx5{ font-size: 40pt; font-family: 돋움, Dotum, Helvetica; font-weight: bold;  margin: 10px 0px 0px 10px; }
+#lolDbMatchTeamList .gametime{ font-size: 14pt; font-family: 돋움체, Dotum, Helvetica; color: #505050; font-weight: bold; display: block; text-align: center; width: 150px;  margin-top: 18px;}
+#lolDbMatchTeamList .killscore{ margin-top: 15px; }
+#lolDbMatchTeamList .teamscore{ width: 100%; }
+#lolDbMatchTeamList .pick li{
+	float : left;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+#lolDbMatchTeamList .pick li img{
+	float : left;
+	width: 50px;
+	height: 50px;
+}
+
+#lolDbMatchTeamList .wTeam .ban{ float: left; }
+#lolDbMatchTeamList .lTeam .ban{ float: right; }
+#lolDbMatchTeamList .ban{ display: none; }
+#lolDbMatchTeamList .ban{ margin: 0px 5px; }
+#lolDbMatchTeamList .ban li{
+	margin-left: 5px; 
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#lolDbMatchTeamList .ban li img{
+	width: 30px;
+	height: 30px;
+}
+
+#lolDbMatchTeamList .listDetail{
+	width: 100%;
+	height: 20px;
+	background-color: #ddedf0;
+	text-align: center;
+}
+#lolDbMatchTeamList .listDetail a { font-weight: bold; color: black; color: #086d83; line-height: 20px;}
+
+#lolDbMatchTeamList .paging { margin-top: 16px; text-align: center; width: 710px; }
+#lolDbMatchTeamList .paging .currentpg { font-weight: bold; }
+
+#lolDbMatchTeamList .alertMsg { margin-top: 20px; font-size: 11px; font-family: 돋움, Dotum, Helvetica; color: #333333; border: 2px solid #cecece; width: 686px; _width: 710px; padding: 10px; }
+
+
+#lolDbMatchTeamList .detailTable{ width: 690px; border-top: 1px solid #d3d3d3;  background-color: #f6f6f6; padding: 10px;}
+
+#lolDbMatchTeamList .detailTable ul, 
+#lolDbMatchTeamList .detailTable ul li{
+	width: 344px;
+}
+
+#lolDbMatchTeamList .detailTable ul li { border-bottom: 1px dotted #d3d3d3; padding: 10px 0px; }
+#lolDbMatchTeamList .detailTable ul li:last-child{
+	border-bottom: none;
+	padding-bottom: 0px;
+}
+#lolDbMatchTeamList .detailTable ul li:first-child{
+	padding-top: 0px;
+}
+
+#lolDbMatchTeamList .detailTable .left{ float: left; border-right: 1px solid #d3d3d3; } 
+#lolDbMatchTeamList .detailTable .right,
+#lolDbMatchTeamList .detailTable .right .icon,
+#lolDbMatchTeamList .detailTable .right .player  { float: right; }
+#lolDbMatchTeamList .detailTable .right li{
+	padding-left: 10px;
+
+}
+
+
+#lolDbMatchTeamList .detailTable .champicon{ width: 65px; height: 65px; float: right; }
+#lolDbMatchTeamList .detailTable .spellicon{ width: 30px; height: 65px; float: left; margin-right: 5px;}
+#lolDbMatchTeamList .detailTable .spellicon img{ width: 30px; height: 30px; }
+#lolDbMatchTeamList .detailTable .spellicon .spell1icon{ margin-bottom: 5px; }
+
+
+#lolDbMatchTeamList .detailTable .right .champicon{float: left; }
+#lolDbMatchTeamList .detailTable .right .spellicon{float: right; margin-left: 5px;  margin-right: 10px;}  
+#lolDbMatchTeamList .detailTable .playername{  font-size: 14pt; font-family: 돋움체; font-weight: bold; letter-spacing: -1px; display: inline-block; margin: 0px 10px;  }
+
+#lolDbMatchTeamList .detailTable .player{ width: 240px; }
+#lolDbMatchTeamList .detailTable .right .player{ width: 230px; float: left; }
+#lolDbMatchTeamList .detailTable .right .playername{ float: right; }
+#lolDbMatchTeamList .detailTable .player ul li{
+	width: 40px;
+	border: none;
+	padding: 0px;
+	text-align: center;
+
+}
+#lolDbMatchTeamList .detailTable .player ul li:last-child{
+	width: 55px;
+}
+
+#lolDbMatchTeamList .detailTable .player ul.p1 li{
+	font-weight: bold;
+	color: #828282;
+	margin-top: 5px;
+}
+
+#lolDbMatchTeamList .detailTable .player ul.p2 li{
+	font-weight: bold;
+	color: #323232;
+	font-size: 12pt;
+	font-family: 돋움, Dotum, Helvetica;
+}
+
+#lolDbMatchTeamList .detailTable .right ul{
+	width: 230px;
+}
+
+#lolDbMatchTeamList .listTop .date {
+    line-height: 28px;
+    width: 160px;
+    margin-left: 10px;
+    color: black;
+    font-family: 돋움, Dotum, Helvetica;
+    font-weight: bold;
+}
+
+#lolDbMatchTeamList .listTop .title {
+    line-height: 28px;
+    width: 370px;
+    color: black;
+    font-size: 14px;
+    font-family: 돋움, Dotum, Helvetica;
+    font-weight: bold;
+    text-align: center;
+}
+/* 
+
+/* COMMON LAYER */
+#lolCommonLayer { background: #0d1419; border: solid 1px black; position: absolute; display: none; z-index: 999; }
+#lolCommonLayer div.inLayer { border: 1px solid #3e7194; }
+#lolCommonLayer div.inLayer div.inLayer2 { border: 2px solid #2d3f4a; padding: 9px; color: #ffd339; }
+#lolCommonLayer { overflow: hidden; color: #ffd339; line-height: 15px; white-space: nowrap; }
+#lolBody .wrap710YE1 { width: 710px; }
+#lolBody .wrap710YE1 .w710T { background: url('http://static.inven.co.kr/image_2011/lol/common/wrap_710_beige1_guide_top.png') no-repeat left top; width: 710px; height: 11px; overflow: hidden; }
+#lolBody .wrap710YE1 .w710M .title606BE1 { background: url('http://static.inven.co.kr/image_2011/lol/common/title_606x40_guide_bg.png') no-repeat left top; width: 573px; height: 26px; _width: 606px; _height: 40px; margin: 15px 0 0 53px; padding: 14px 0 0 33px; font-weight: bold; font-size: 12px; color: #0f1f46; }
+#lolBody .wrap710YE1 .w710M { width: 710px; background: url('http://static.inven.co.kr/image_2011/lol/common/wrap_710_beige1_guide_mid.png') repeat-y left top; }
+#lolBody .wrap710YE1 .w710M .viewBody { width: 600px; margin-left: 55px; margin-top: 25px; clear: both; }
+#lolBody .wrap710YE1 .w710M .viewBody .boardContent { line-height: 150%; }
+#lolBody .wrap710YE1 .w710M .viewBody .boardContent div { float: none; }
+#lolBody .wrap710YE1 .w710M .links { margin-top: 30px; width: 600px; margin-left: 55px; }
+#lolBody .wrap710YE1 .w710M .links a { font-weight: bold; }
+#lolBody .wrap710YE1 .w710M .importantNote { width: 600px; margin-left: 55px; color: blue; font-weight: bold; margin-bottom: 30px; }
+#lolBody .wrap710YE1 .w710M li { clear: both; width: 600px; }
+#lolBody .wrap710YE1 .w710B { width: 710px; height: 152px; background: url('http://static.inven.co.kr/image_2011/lol/common/wrap_710_beige1_guidebot.png') no-repeat left top; }
